@@ -1,0 +1,283 @@
+# 🟦 Backend Developer Roadmap (2025–2026) — TypeScript Edition
+
+This roadmap is based on [roadmap.sh/backend](https://roadmap.sh/backend) but fully tailored for **TypeScript + Node.js**.
+
+---
+
+## 1. 🌐 Web & Internet Fundamentals
+
+- How the **web works**: DNS, HTTP/HTTPS, domain, hosting, CDNs
+- **Client–server model**: requests, responses, headers, status codes
+- Learn about **REST vs GraphQL vs gRPC**
+- WebSockets, SSE, long polling for real-time apps
+
+**Mini-projects**:
+
+- Build a raw Node.js HTTP server (in TS using `ts-node`)
+- Implement a JSON API without frameworks
+
+---
+
+## 2. 🟦 TypeScript Fundamentals
+
+- TypeScript basics: types, interfaces, enums, generics
+- Advanced types: unions, intersections, utility types
+- Config: `tsconfig.json`, strict mode, module resolution
+- Tooling: `ts-node`, `tsc`, ESLint + Prettier
+
+**Mini-projects**:
+
+- Convert a small JS project to TS
+- Create a CLI calculator using TypeScript
+
+---
+
+## 3. 🏗️ Node.js + Frameworks (with TypeScript)
+
+- **Core Node.js modules**: fs, http, events, streams
+- Express.js (with TS types & middlewares)
+- NestJS (structured, enterprise-level backend)
+- Fastify (for performance-focused APIs)
+
+**Mini-projects**:
+
+- REST API with Express + TS
+- GraphQL API with Apollo Server + TS
+- NestJS task manager API
+
+---
+
+## 4. 🗄️ Databases & ORMs
+
+- **Relational**: PostgreSQL, MySQL
+- **NoSQL**: MongoDB, Redis
+- Querying: SQL joins, indexing, transactions
+- ORMs/ODMs (TypeScript-friendly):
+
+  - Prisma (recommended)
+  - TypeORM
+  - Mongoose (MongoDB)
+
+**Mini-projects**:
+
+- Todo API with PostgreSQL + Prisma
+- Blog API with MongoDB + Mongoose
+
+---
+
+## 5. 🔒 Authentication & Security
+
+- Sessions + cookies (express-session)
+- JWT authentication (stateless)
+- OAuth2 / Google Login (Passport.js or Auth0 SDK)
+- Password hashing (`bcrypt`, `argon2`)
+- Security headers with `helmet`
+- Input validation with `zod` or `class-validator`
+
+**Mini-projects**:
+
+- JWT auth system in Express + TS
+- Google OAuth login with Passport.js
+
+---
+
+## 6. 🚀 Deployment & DevOps
+
+- **Environment configs**: dotenv, cross-env
+- Hosting: Railway, Render, Vercel, AWS EC2
+- Reverse proxy: Nginx basics
+- Docker: Dockerfile + docker-compose for Node.js + Postgres
+- CI/CD: GitHub Actions, GitLab CI
+
+**Mini-projects**:
+
+- Dockerize a NestJS API + Postgres
+- Deploy an Express API on Railway/Render
+
+---
+
+## 7. 📊 Observability & Performance
+
+- Logging: Winston, Pino
+- Monitoring: Prometheus + Grafana (optional)
+- API metrics: response times, error tracking (Sentry)
+- Caching: Redis for sessions & queries
+- Performance optimization: clustering, PM2
+
+**Mini-projects**:
+
+- Add Winston logging middleware
+- Add Redis caching to an API
+
+---
+
+## 8. 🏛️ System Design & Architecture
+
+- Monolith vs Microservices in TypeScript
+- Event-driven architecture (RabbitMQ, Kafka, NATS)
+- CQRS and Domain-driven design (DDD) with NestJS
+- API Gateway, rate limiting, throttling
+- CAP theorem, ACID vs BASE
+
+**Mini-projects**:
+
+- Event-driven order + notification microservices
+- Microservice with gRPC (TS with `grpc-js`)
+
+---
+
+## 9. 🧪 Testing & Code Quality
+
+- Unit testing: Jest + ts-jest
+- Integration testing: Supertest + Jest
+- End-to-end (E2E) tests with Playwright or Cypress
+- Code quality: ESLint, Prettier, Husky (pre-commit hooks)
+
+**Mini-projects**:
+
+- Write Jest unit tests for blog API
+- Integration tests for auth system
+
+---
+
+## 10. 📂 Final Projects (Portfolio-Ready)
+
+- **Beginner**: URL shortener, Weather API wrapper
+- **Intermediate**:
+
+  - E-commerce API (products, cart, orders, auth)
+  - Chat backend with WebSockets + Redis
+
+- **Advanced**:
+
+  - SaaS backend (subscriptions, billing, roles)
+  - Job queue system (BullMQ + Redis)
+
+### 📁 Repo Folder Structure (TypeScript Focused)
+
+```pgsgl
+backend-roadmap-ts/
+├── README.md                # This roadmap
+├── notes/                   # Notes & resources
+│   ├── typescript.md
+│   ├── nodejs.md
+│   ├── databases.md
+│   ├── auth.md
+│   └── devops.md
+├── fundamentals/
+│   ├── raw-http-server-ts/
+│   └── cli-calculator-ts/
+├── express-nest/
+│   ├── express-api-ts/
+│   ├── graphql-apollo-ts/
+│   └── nest-task-manager/
+├── databases/
+│   ├── prisma-postgres-todo/
+│   └── mongoose-blog-api/
+├── auth-security/
+│   ├── jwt-auth-api/
+│   ├── session-auth-api/
+│   └── oauth-google/
+├── deployment/
+│   ├── dockerized-nestjs/
+│   ├── nginx-config/
+│   └── ci-cd-github-actions/
+├── observability/
+│   ├── winston-logger/
+│   └── redis-caching/
+├── system-design/
+│   ├── microservices-orders/
+│   └── event-driven-notifications/
+├── testing/
+│   ├── jest-unit-tests/
+│   └── supertest-integration/
+└── projects/
+    ├── beginner/
+    │   ├── url-shortener-ts/
+    │   └── weather-api-ts/
+    ├── intermediate/
+    │   ├── ecommerce-api-ts/
+    │   └── chat-backend-ts/
+    └── advanced/
+        ├── saas-backend-ts/
+        └── job-queue-bullmq-ts/
+```
+
+<!-- ### 📁 Example Project Structure (Express + TypeScript)
+
+```pgsql
+backend-typescript/
+├── src/
+│   ├── config/                 # Configuration files
+│   │   ├── database.ts         # DB connection configuration
+│   │   └── environment.ts      # Environment variables
+│   ├── controllers/            # Route controllers
+│   │   ├── userController.ts
+│   │   └── authController.ts
+│   ├── models/                 # Database models
+│   │   ├── User.ts
+│   │   └── Post.ts
+│   ├── routes/                 # Express routes
+│   │   ├── api/
+│   │   │   ├── v1/            # API versioning
+│   │   │   │   ├── userRoutes.ts
+│   │   │   │   └── authRoutes.ts
+│   │   │   └── index.ts
+│   ├── middleware/             # Custom middleware
+│   │   ├── auth.ts
+│   │   ├── validation.ts
+│   │   └── errorHandler.ts
+│   ├── services/               # Business logic
+│   │   ├── userService.ts
+│   │   └── authService.ts
+│   ├── repositories/           # Data access layer
+│   │   ├── userRepository.ts
+│   │   └── baseRepository.ts
+│   ├── types/                  # Custom TypeScript types
+│   │   ├── express/            # Extended Express types
+│   │   │   └── index.d.ts
+│   │   ├── User.type.ts
+│   │   └── ApiResponse.type.ts
+│   ├── utils/                  # Utility functions
+│   │   ├── logger.ts
+│   │   ├── apiResponse.ts
+│   │   └── helpers.ts
+│   ├── tests/                  # Test files
+│   │   ├── unit/
+│   │   ├── integration/
+│   │   └── fixtures/
+│   ├── app.ts                  # Express app setup
+│   └── server.ts               # Server initialization
+├── dist/                       # Compiled JavaScript output
+├── docs/                       # Project documentation
+├── scripts/                    # Deployment/build scripts
+├── .env                        # Environment variables
+├── .eslintrc.js               # ESLint configuration
+├── .prettierrc                # Prettier configuration
+├── tsconfig.json              # TypeScript configuration
+└── package.json
+``` -->
+
+---
+
+## ✅ Checklist for Completion
+
+1 - Master TypeScript type system and advanced features
+
+1 - Build a RESTful API with Express and TypeScript
+
+2 - Implement authentication and authorization
+
+3 - Integrate with SQL and NoSQL databases
+
+4 - Write comprehensive tests for all components
+
+5 - Containerize application with Docker
+
+6 - Set up CI/CD pipeline
+
+8 - Implement monitoring and logging
+
+9 - Optimize application performance
+
+10 - Deploy to a cloud platform
