@@ -1,4 +1,4 @@
-# 🟦 Backend Developer Roadmap (2025–2026) — TypeScript Edition
+# 🟦 Backend Developer Roadmap  — TypeScript Edition
 
 This roadmap is based on [roadmap.sh/backend](https://roadmap.sh/backend) but fully tailored for **TypeScript + Node.js**.
 
